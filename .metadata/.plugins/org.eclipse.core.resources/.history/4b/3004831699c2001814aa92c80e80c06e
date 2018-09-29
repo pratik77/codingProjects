@@ -1,0 +1,86 @@
+import java.util.Scanner;
+
+public class CandidateCode {
+	int largest;
+	String pattern;
+	int size;
+	
+	public CandidateCode(int size, String pattern, int largest) {
+		this.size = size;
+		this.pattern = pattern;
+		this.largest = largest;
+	}
+	
+	public static void main(String[] args) {
+		// TODO Auto-generated method stub
+		
+		Scanner sc = new Scanner(System.in);
+		int size = sc.nextInt();
+		String pattern = sc.next() + sc.nextLine();
+		CandidateCode lm = new CandidateCode(size, pattern, 0);
+		int j;
+		int largestTemp = 0;
+		int leftIndex = 0;
+		int rightIndex = size - 1;
+		int left[] = new int[200];
+		int right[] = new int[200];
+		for(int i = 0 ; i < size - 1; i++) {
+			for(j = size - 1; j > i; j--) {
+			if(lm.largest >= j - i + 1)break;
+			if(lm.pattern.charAt(i) == lm.pattern.charAt(j)) {
+				largestTemp = findPallindrome(lm, i, j, i, j);
+				if(lm.largest < largestTemp) {
+					lm.largest = largestTemp;
+					leftIndex = i;
+					rightIndex = j;
+				}
+				if(largestTemp > 0 )break;
+				
+			}
+			
+			}
+		}
+		printOutput(size, lm, leftIndex, rightIndex, left, right);
+
+	}
+
+	private static void printOutput(int size, CandidateCode lm, int leftIndex, int rightIndex, int[] left,
+			int[] right) {
+		int count = 0;
+		for(int i = 0; i < leftIndex; i++) {
+			left[lm.pattern.charAt(i)]++;
+		}
+		for(int i = rightIndex + 1; i < size; i++) {
+			right[lm.pattern.charAt(i)]++;
+		}
+		
+		int i = 0;
+		while(i < 200) {
+			if(left[i] != 0 && right[i] != 0)
+				count = count + Math.abs(right[i] - left[i]);
+			else if(left[i] != 0)
+				count += Math.abs(left[i]);
+			else if(right[i] != 0)
+				count += Math.abs(right[i]);
+			
+			i++;
+		}
+		int z = 'z';
+		System.out.println(z);
+		System.out.println(count);
+	}
+
+	private static int findPallindrome(CandidateCode lm, int i, int j, int i2, int j2) {
+		// TODO Auto-generated method stub
+		if(i2 == j2 || (lm.pattern.charAt(i2) == lm.pattern.charAt(j2) && (i2 + 1 == j2))) {
+			
+			return j - i + 1;
+		}
+		if(lm.pattern.charAt(i2) == (lm.pattern.charAt(j2))) {
+			return findPallindrome(lm, i, j, i2+1, j2-1);
+		}
+		
+		return 0;
+	}
+
+}

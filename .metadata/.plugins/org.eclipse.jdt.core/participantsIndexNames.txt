@@ -1,0 +1,19 @@
+INDEX VERSION 1.130
+/Users/pratiks77/Documents/workspace/.metadata/.plugins/org.eclipse.jst.jsp.core/jspsearch/3024971787.index
+/chathub/src/main/resources
+/Users/pratiks77/Documents/workspace/.metadata/.plugins/org.eclipse.jst.jsp.core/jspsearch/4201396940.index
+/Tourist/src
+/Users/pratiks77/Documents/workspace/.metadata/.plugins/org.eclipse.jst.jsp.core/jspsearch/1377591578.index
+/tomcat-jersey-jackson-demo/src/main/java
+/Users/pratiks77/Documents/workspace/.metadata/.plugins/org.eclipse.jst.jsp.core/jspsearch/1399722068.index
+/Tourist/src
+/Users/pratiks77/Documents/workspace/.metadata/.plugins/org.eclipse.jst.jsp.core/jspsearch/2444752834.index
+/RailReads/src/main/resources
+/Users/pratiks77/Documents/workspace/.metadata/.plugins/org.eclipse.jst.jsp.core/jspsearch/3064489107.index
+/Chathub/src/main/resources
+/Users/pratiks77/Documents/workspace/.metadata/.plugins/org.eclipse.jst.jsp.core/jspsearch/2361331686.index
+/Chathub/src/main/resources
+/Users/pratiks77/Documents/workspace/.metadata/.plugins/org.eclipse.jst.jsp.core/jspsearch/57327447.index
+/chathub/src/main/resources
+/Users/pratiks77/Documents/workspace/.metadata/.plugins/org.eclipse.jst.jsp.core/jspsearch/916823914.index
+/RailReads/src/main/java

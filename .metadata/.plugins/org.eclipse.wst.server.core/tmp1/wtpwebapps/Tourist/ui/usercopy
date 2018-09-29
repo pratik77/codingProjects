@@ -1,0 +1,7 @@
+
+ <div class="sidenav1">
+<a href="retrieveAllPlaces.obj">Home</a><br>
+<a href="submitFeedback.obj">Submit Feedback</a><br>
+<a href="loginPage.obj">Logout</a>
+  </div>
+  <%@include file="header.jsp" %>

@@ -1,0 +1,4 @@
+#Tomcat publish data
+#Sun Jul 08 19:09:55 IST 2018
+org.eclipse.jst.jee.server\:/binary\:/Users/pratiks77/Downloads/Tourist/WebContent/WEB-INF/lib/spring-web-4.1.6.RELEASE.jar=WEB-INF/lib/spring-web-4.1.6.RELEASE.jar
+org.eclipse.jst.j2ee.server\:/binary\:/Users/pratiks77/.m2/repository/org/springframework/spring-web/5.0.7.RELEASE/spring-web-5.0.7.RELEASE.jar=WEB-INF/lib/spring-web-5.0.7.RELEASE.jar

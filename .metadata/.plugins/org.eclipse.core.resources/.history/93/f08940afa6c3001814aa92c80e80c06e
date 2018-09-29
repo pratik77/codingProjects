@@ -1,0 +1,44 @@
+import java.util.Scanner;
+
+public class MinInsertion {
+	char[] pattern;
+	int size;
+	int memo[][];
+	public MinInsertion(int size, char[] pattern) {
+		this.size = size;
+		this.pattern = pattern;
+		this.memo = new int[size][size];
+	}
+	
+	public static void main(String[] args) {
+		Scanner sc = new Scanner(System.in);
+		MinInsertion mi = new MinInsertion(Integer.parseInt(sc.next()), (sc.nextLine() + sc.nextLine()).toCharArray());
+		
+		int min = findMinInsertion(mi, 0, mi.size - 1);
+		
+	}
+
+	private static int findMinInsertion(MinInsertion mi, int i, int j) {
+		// TODO Auto-generated method stub
+		if(i+1 == j) {
+			if(mi.pattern[i] == mi.pattern[j]) {
+				return 0;
+			}
+			return 1;
+		}
+		
+		if(mi.pattern[i] == mi.pattern[j]) {
+			return findMinInsertion(mi, i + 1, j - 1);
+		}
+		
+		return min(findMinInsertion(mi, i, j - 1),findMinInsertion(mi, i + 1, j)) + 1;
+	}
+
+	private static int min(int x, int y) {
+		// TODO Auto-generated method stub
+		if(x > y)
+			return y;
+		return x;
+	}
+
+}

@@ -1,0 +1,76 @@
+import java.util.Scanner;
+
+public class LondonMillionaire {
+	int largest;
+	String pattern;
+	int size;
+	
+	public LondonMillionaire(int size, String pattern, int largest) {
+		this.size = size;
+		this.pattern = pattern;
+		this.largest = largest;
+	}
+	
+	public static void main(String[] args) {
+		// TODO Auto-generated method stub
+		
+		Scanner sc = new Scanner(System.in);
+		int size = sc.nextInt();
+		String pattern = sc.next() + sc.nextLine();
+		LondonMillionaire lm = new LondonMillionaire(size, pattern, 0);
+		int j;
+		int largestTemp = 0;
+		int leftIndex = 0;
+		int rightIndex = size - 1;
+		int left[] = new int[200];
+		int right[] = new int[200];
+		for(int i = 0 ; i < size - 1; i++) {
+			for(j = size - 1; j > i; j--) {
+			if(lm.largest >= j - i + 1)break;
+			if(lm.pattern.charAt(i) == lm.pattern.charAt(j)) {
+				//System.out.println(lm.pattern.charAt(i));
+				largestTemp = findPallindrome(lm, i, j, i, j);
+				//System.out.println("largest3 = "+largestTemp);
+				//System.out.println(lm.largest > largestTemp);
+				if(lm.largest < largestTemp) {
+					//System.out.println("largest2 = "+ lm.largest);
+					lm.largest = largestTemp;
+					leftIndex = i;
+					rightIndex = j;
+					System.out.println("i = "+i);
+					System.out.println("j = "+j);
+				}
+				if(largestTemp > 0 )break;
+				
+			}
+			
+			}
+		}
+		left['a'] = 9;
+		System.out.println(left[90]);
+		
+		for(int i = 0; i < leftIndex; i++) {
+			left[lm.pattern.charAt(i)]++;
+		}
+		
+		
+
+	}
+
+	private static int findPallindrome(LondonMillionaire lm, int i, int j, int i2, int j2) {
+		// TODO Auto-generated method stub
+		if(i2 == j2 || (lm.pattern.charAt(i2) == lm.pattern.charAt(j2) && (i2 + 1 == j2))) {
+			//System.out.println(lm.pattern.charAt(i2));
+			//System.out.println("largest = "+ (j - i + 1));
+			System.out.println("j = "+j+"i = "+i);
+			return j - i + 1;
+		}
+		if(lm.pattern.charAt(i2) == (lm.pattern.charAt(j2))) {
+			//System.out.println(lm.pattern.charAt(i2));
+			return findPallindrome(lm, i, j, i2+1, j2-1);
+		}
+		
+		return 0;
+	}
+
+}

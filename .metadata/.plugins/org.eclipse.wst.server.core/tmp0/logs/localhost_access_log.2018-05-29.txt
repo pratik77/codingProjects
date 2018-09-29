@@ -1,0 +1,10 @@
+127.0.0.1 - - [29/May/2018:09:27:48 +0530] "GET / HTTP/1.1" 404 1073
+127.0.0.1 - - [29/May/2018:09:28:22 +0530] "GET / HTTP/1.1" 404 1073
+0:0:0:0:0:0:0:1 - - [29/May/2018:09:28:24 +0530] "GET /tomcat-jersey-jackson-demo/index.jsp HTTP/1.1" 200 1773
+0:0:0:0:0:0:0:1 - - [29/May/2018:09:28:24 +0530] "GET /tomcat-jersey-jackson-demo/js/jquery-1.11.2.min.js HTTP/1.1" 200 95930
+0:0:0:0:0:0:0:1 - - [29/May/2018:09:28:24 +0530] "GET /favicon.ico HTTP/1.1" 404 1084
+0:0:0:0:0:0:0:1 - - [29/May/2018:09:28:32 +0530] "GET /tomcat-jersey-jackson-demo/service/message HTTP/1.1" 200 85
+0:0:0:0:0:0:0:1 - - [29/May/2018:09:28:51 +0530] "POST /tomcat-jersey-jackson-demo/service/message/post HTTP/1.1" 200 2
+0:0:0:0:0:0:0:1 - - [29/May/2018:09:28:56 +0530] "GET /tomcat-jersey-jackson-demo/service/person/get HTTP/1.1" 200 177
+0:0:0:0:0:0:0:1 - - [29/May/2018:09:31:57 +0530] "GET /tomcat-jersey-jackson-demo/service/message HTTP/1.1" 200 85
+0:0:0:0:0:0:0:1 - - [29/May/2018:09:40:26 +0530] "GET /tomcat-jersey-jackson-demo/service/message HTTP/1.1" 200 85
