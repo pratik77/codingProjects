@@ -23,7 +23,6 @@ public class CandidateCode {
 		int min = findMinInsertion(mi, 0, mi.size - 1);
 		 
 		System.out.println(min);
-		//
 		
 		
 	}
