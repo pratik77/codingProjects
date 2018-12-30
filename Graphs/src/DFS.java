@@ -1,5 +1,14 @@
 import java.util.LinkedList;
 
+class Node {
+	int vert;
+	int weight;
+
+	public Node(int vert, int weight) {
+		this.vert = vert;
+		this.weight = weight;
+	}
+}
 
 
 public class DFS {

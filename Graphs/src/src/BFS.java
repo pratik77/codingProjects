@@ -1,4 +1,7 @@
+package src;
+
 import java.util.LinkedList;
+import java.util.Scanner;
 
 class Node {
 	int vert;
@@ -36,7 +39,7 @@ public class BFS {
 
 	public static void main(String[] args) {
 
-		FastReader fs = new FastReader();
+		Scanner fs = new Scanner(System.in);
 		BFS bfs = new BFS(7);
 		bfs.addEdge(0, 4, 1);
 		bfs.addEdge(0, 6, 2);
