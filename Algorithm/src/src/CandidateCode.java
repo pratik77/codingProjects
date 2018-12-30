@@ -22,7 +22,7 @@ public class CandidateCode {
 	public CandidateCode(String m, String n, int p, int budget) {
 		this.m = Integer.parseInt(m);
 		this.n = Integer.parseInt(n);
-		this.grid = new int[this.n+1][this.n+1];
+		this.grid = new int[this.n+1][this.n+1];;
 		plot = new Vector[p];
 		this.nplots = p;
 		this.budget = budget;
