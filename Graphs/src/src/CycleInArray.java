@@ -75,8 +75,8 @@ public class CycleInArray {
 				return false;
 
 			}
-			else
-				return false;
+			return false;
+			
 
 		}
 
