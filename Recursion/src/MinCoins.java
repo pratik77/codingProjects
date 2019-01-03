@@ -47,7 +47,7 @@ public class MinCoins {
 		
 		for(int i = 0 ; i < coins.length ; i++) {
 			if(coins[i] <= value) {
-				int apparentMin = findMinCoins(value - coins[i]);
+				int apparentMin = findMinCoins(value - coins[i]);;
 				if(apparentMin + 1 < actualMin) {
 					actualMin = apparentMin + 1;
 				}
