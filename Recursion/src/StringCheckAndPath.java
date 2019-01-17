@@ -42,9 +42,9 @@ public class StringCheckAndPath {
 			for (int j = 0; j < col; j++) {
 
 				if (matrix[i][j].charAt(0) == testStr.charAt(0)) {
-					path = checkPath(i, j + 1, "R", 1, path);
+					path = checkPath(i, j + 1, "R", 1);
 					if (path.contains("No Path")) {
-						path = checkPath(i + 1, j, "D", 1, path);
+						path = checkPath(i + 1, j, "D", 1);
 					}
 					if (!path.contains("No Path"))
 						return path;
@@ -55,8 +55,9 @@ public class StringCheckAndPath {
 		return "No Path";
 	}
 
-	private String checkPath(int i, int j, String direction, int k, String path) {
+	private String checkPath(int i, int j, String direction, int k) {
 		// TODO Auto-generated method stub
+		String path = "";
 		if (matrix[i][j].charAt(0) != testStr.charAt(k))
 			return "No Path";
 		if (k == testStr.length() - 1) {
@@ -65,14 +66,14 @@ public class StringCheckAndPath {
 		if (i == row - 1 && j == col - 1)
 			return "No Path";
 		if (i == row - 1) {
-			return path = direction + checkPath(i, j + 1, "R", k + 1, path + direction);
+			return path = direction + checkPath(i, j + 1, "R", k + 1);
 		}
 		if (j == col - 1) {
-			return path = direction + checkPath(i + 1, j, "D", k + 1, path + direction);
+			return path = direction + checkPath(i + 1, j, "D", k + 1);
 		}
-		path = direction + checkPath(i, j + 1, "R", k + 1, path + direction);
+		path = direction + checkPath(i, j + 1, "R", k + 1);
 		if (path.contains("No Path")) {
-			path = direction + checkPath(i + 1, j, "D", k + 1, path + direction);
+			path = direction + checkPath(i + 1, j, "D", k + 1);
 		}
 		return path;
 
