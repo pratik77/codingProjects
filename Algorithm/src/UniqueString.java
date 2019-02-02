@@ -15,9 +15,6 @@ public class UniqueString {
 		int length = str.length();
 		int count = 0;
 		memo = new int[length][length];
-		for(int i = 0 ; i < length ; i++){
-			Arrays.fill(memo[i], -1);
-		}
 	}
 	
 	public static void main(String[] args) throws IOException {
