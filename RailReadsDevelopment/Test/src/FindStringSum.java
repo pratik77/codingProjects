@@ -21,6 +21,8 @@ public class FindStringSum {
 		}
 		if(i == str.length())
 			System.out.println(sum);
+		
+		System.out.println(new String("DCI".getBytes()).contains("DCI"));
 
 	}
 
